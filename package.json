@@ -1,0 +1,34 @@
+{
+  "name": "basketboard_api",
+  "version": "0.0.0",
+  "description": "The Basketboard Api",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node api/index.js",
+    "dev": "nodemon api/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emiliano-gl/Basketboard-Api.git"
+  },
+  "keywords": [
+    "basketball",
+    "basketboard",
+    "scoreboard",
+    "api"
+  ],
+  "author": "Emiliano Guerrero",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Emiliano-gl/Basketboard-Api/issues"
+  },
+  "homepage": "https://github.com/Emiliano-gl/Basketboard-Api#readme",
+  "dependencies": {
+    "apollo-server-express": "^2.4.8",
+    "express": "^4.16.4",
+    "graphql": "^14.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
