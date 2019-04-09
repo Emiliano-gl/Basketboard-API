@@ -1,4 +1,4 @@
-const { ApolloServer, gql } = require("apollo-server-express");
+import { ApolloServer, gql } from "apollo-server-express";
 
 const typeDefs = gql`
   type Query {
@@ -6,11 +6,7 @@ const typeDefs = gql`
   }
 `;
 
-const server = new ApolloServer({
+export const server = new ApolloServer({
   typeDefs,
   mocks: true
 });
-
-module.exports = {
-  server
-}

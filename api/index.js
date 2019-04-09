@@ -1,5 +1,5 @@
-const { server } = require("./graphql/apolloConfig");
-const express = require("express");
+import { server } from "./graphql/apolloConfig";
+import express from "express";
 const app = express();
 
 app.set("port", process.env.PORT || 3000);
