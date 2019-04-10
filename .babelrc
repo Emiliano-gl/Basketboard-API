@@ -1,4 +1,4 @@
 {
   "presets": ["@babel/preset-env", "minify"],
-  "plugins": ["minify-simplify"]
+  "plugins": ["minify-simplify", "import-graphql"]
 }

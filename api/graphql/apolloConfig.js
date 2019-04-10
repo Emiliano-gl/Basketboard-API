@@ -1,10 +1,5 @@
-import { ApolloServer, gql } from "apollo-server-express";
-
-const typeDefs = gql`
-  type Query {
-    hello: String
-  }
-`;
+import { ApolloServer } from "apollo-server-express";
+import typeDefs from "./gql/User.gql"
 
 export const server = new ApolloServer({
   typeDefs,
