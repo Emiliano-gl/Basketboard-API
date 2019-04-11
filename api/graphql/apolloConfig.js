@@ -1,9 +1,11 @@
 import { ApolloServer, makeExecutableSchema } from "apollo-server-express";
-import { index } from "./gql/index";
-import { typesQuery } from "./gql/typesQuery";
+import Queries from "./gql/Queries";
+import typesQuery from "./gql/typesQuery";
+import Mutations from "./gql/Mutations";
+import typesMutation from "./gql/typesMutation";
 
 const schema = makeExecutableSchema({
-  typeDefs: [index, typesQuery]
+  typeDefs: [Queries, typesQuery, Mutations, typesMutation]
 });
 
 export const server = new ApolloServer({
