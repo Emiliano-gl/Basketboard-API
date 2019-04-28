@@ -2,6 +2,8 @@ import { gql } from "apollo-server-express";
 
 export default gql`
   type Query {
-    users: [User]
+    getUsers: [User]
+    getUserByUsername(username: String!): User
+    getUserById(id: String!): User
   }
 `;

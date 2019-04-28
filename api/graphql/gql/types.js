@@ -7,6 +7,11 @@ export default gql`
     team: [Player]
   }
 
+  type NewUser {
+    id: ID
+    username: String
+  }
+
   type Player {
     name: String
     number: Int

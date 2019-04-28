@@ -1,14 +1,16 @@
 import { ApolloServer, makeExecutableSchema } from "apollo-server-express";
 import Queries from "./gql/Queries";
-import typesQuery from "./gql/typesQuery";
+import Types from "./gql/types";
 import Mutations from "./gql/Mutations";
-import typesMutation from "./gql/typesMutation";
+import Inputs from "./gql/inputs";
+// import QueryResolvers from "./resolvers/QueryResolver";
+import MutationResolvers from "./resolvers/MutationResolver";
 
 const schema = makeExecutableSchema({
-  typeDefs: [Queries, typesQuery, Mutations, typesMutation]
+  typeDefs: [Queries, Types, Mutations, Inputs],
+  resolvers: [MutationResolvers]
 });
 
 export const server = new ApolloServer({
-  schema,
-  mocks: true
+  schema
 });
