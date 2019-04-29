@@ -1,5 +1,11 @@
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+
 import { server } from "./graphql/apolloConfig";
 import express from "express";
+require("./Database");
+
 const app = express();
 
 app.set("port", process.env.PORT || 3000);
